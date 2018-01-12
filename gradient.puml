@@ -1,0 +1,47 @@
+@startuml
+ 
+title Gradient
+ 
+skinparam defaultTextAlignment center
+skinparam RectangleFontSize 24
+skinparam RectangleFontColor #ffffff
+ 
+skinparam TitleFontStyle bold
+skinparam TitleFontColor #005000
+ 
+' Define two colors for a gradient
+' and use - for left to right.
+skinparam BackgroundColor  #e2e2e2-#afafaf
+ 
+' Define two colors for a gradient
+' and use / for top left to bottom right.
+skinparam RectangleBackgroundColor #000040/#4040ff
+ 
+rectangle A [
+    From top left
+    to bottom right
+    <&fullscreen-enter>
+]
+ 
+' Use \ for bottom left to top right
+rectangle B #000040\4040ff [
+    From bottom left
+    to top right
+    <&resize-both>
+]
+ 
+' Use | for left to right
+rectangle C #000040|4040ff [
+    From left
+    to right
+    <&resize-width>
+]
+ 
+' Use | for top to bottom
+rectangle D #000040-4040ff [
+    From top
+    to bottom
+    <&resize-height>
+]
+ 
+@enduml

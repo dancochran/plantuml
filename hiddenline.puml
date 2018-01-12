@@ -1,0 +1,16 @@
+@startuml
+ 
+package "Core Components" {
+    [Backend Client] as BackendClient
+    [File Reader] as FileReader
+    [Content Transform] as ContentTransform
+    [Logging]
+}
+ 
+BackendClient ~~> ContentTransform : uses
+FileReader --> ContentTransform: uses
+ 
+' The [hidden] line pushes the Logging component down in the drawing but doesn't show the line
+BackendClient -[hidden]- Logging
+ 
+@enduml
