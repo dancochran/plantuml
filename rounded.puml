@@ -1,0 +1,27 @@
+@startuml
+
+skinparam node<<nSimple>> {
+  backgroundColor Blue
+  fontName CourierNew
+  fontColor #ffffff
+}
+ 
+skinparam rectangle {
+  backgroundColor Red
+  fontName TimesNewRoman
+  fontColor #ffffff
+}
+skinparam rectangle<<Simple>> {
+  backgroundColor Blue
+  roundCorner 30
+  fontName Arial
+  fontColor #ffffff
+}
+ 
+node "aa" as aa <<nSimple>>
+rectangle "bb" as bb
+rectangle "cccccccccc" as cc <<Simple>>
+
+hide stereotype
+@enduml
+
