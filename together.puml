@@ -1,0 +1,39 @@
+@startuml
+package "parent" {
+  ' The together tag groups elements as a set, ensuring they stay in one area of the diagram.
+  ' This is a simpler approach than having several [hidden] tags.
+  together {
+    package "childA2" {
+    }
+
+    package "childA1" {
+    }
+  }
+
+  together {
+    package "childB4" {
+    }
+
+    package "childB3" {
+    }
+
+    package "childB2" {
+    }
+
+    package "childB1" {
+    }
+  }
+
+
+  together {
+    package "childC2" {
+    }
+
+    package "childC1" {
+    }
+  }
+  ' These [hidden] tags force the top down flow from A->C in the drawing, pushing the "together" groups around
+  childA1 -[hidden]-> childB1
+  childB1 -[hidden]-> childC1
+}
+@enduml
